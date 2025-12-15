@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/loginform.css" />
+    <title>Đăng Nhập</title>
+  </head>
+  <body>
+    <div class="login-box">
+      <img src="img/icon.png" class="logo" />
+
+      <h1 class="title">Đăng nhập</h1>
+      <p class="subtitle">Truy cập tài khoản của bạn</p>
+
+      <form>
+        <div class="input-group">
+          <label class="input-label">Email</label>
+          <input type="email" class="input-field" required placeholder="Email" />
+        </div>
+
+        <div class="input-group">
+          <label class="input-label">Mật khẩu</label>
+          <div class="password-group">
+            <input type="password" class="input-field" required placeholder="Mật khẩu" id="password" />
+            <button type="button" class="show-button" id="togglePw">HIỆN</button>
+          </div>
+        </div>
+
+        <div class="options">
+          <div class="remember-group">
+            <input type="checkbox" class="checkbox" id="remember" />
+            <label for="remember" class="remember-label">Ghi Nhớ</label>
+          </div>
+          <a href="#!" class="forgot-link">Quên mật khẩu?</a>
+        </div>
+
+        <!-- <button type="submit" class="signin-button">Đăng nhập</button> -->
+        <a href="index.html" class="signin-button">Đăng nhập</a>
+      </form>
+
+      <div class="or">
+        <div class="or-line"></div>
+        <span class="or-text">Hoặc</span>
+        <div class="or-line"></div>
+      </div>
+
+      <div class="social-buttons">
+        <button type="button" class="social-btn">Google</button>
+        <button type="button" class="social-btn">Twitter</button>
+      </div>
+
+      <p class="signup-text">Chưa có tài khoản? <a href="#!" class="signup-link"> Tạo tài khoản</a></p>
+    </div>
+
+    <script src="js/tgpass.js"></script>
+  </body>
+</html>

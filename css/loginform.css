@@ -1,0 +1,257 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 1.4rem;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  padding: 20px;
+  background-image: url("../img/login bgr img.jpg");
+}
+
+.login-box {
+  background-color: #fff;
+  width: 100%;
+  max-width: 360px;
+  padding: 40px 30px;
+  border: 3px solid #000;
+  box-shadow: 8px 8px 0 #000;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  background-color: #000;
+  margin: 0 auto 20px;
+  display: flex;
+}
+
+.title {
+  font-size: 2.4rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #666;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+.input-field {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #000;
+  font-size: 1.4rem;
+  font-family: Arial, sans-serif;
+}
+
+.input-field:focus {
+  outline: none;
+  background-color: #f9f9f9;
+}
+
+.password-group {
+  position: relative;
+}
+
+.show-button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  padding: 0 15px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* Remember me + Forgot password */
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+.remember-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.checkbox {
+  width: 16px;
+  height: 16px;
+  border: 2px solid #000;
+  cursor: pointer;
+}
+
+.remember-label {
+  cursor: pointer;
+  font-weight: 540;
+}
+
+.forgot-link {
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.forgot-link:hover {
+  text-decoration: underline;
+}
+
+.signin-button {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 16px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  font-size: 1.4rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-decoration: none;
+}
+
+.signin-button:hover {
+  background-color: #333;
+}
+
+.or {
+  display: flex;
+  align-items: center;
+  margin: 30px 0;
+}
+
+.or-line {
+  flex: 1; /*Phần tử tự giãn ra chiếm hết không gian còn lại */
+  height: 1px;
+  background-color: #000;
+}
+
+.or-text {
+  padding: 0 15px;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.social-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.social-btn {
+  flex: 1;
+  padding: 12px;
+  background-color: #fff;
+  border: 2px solid #000;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.social-btn:hover {
+  background-color: #f0f0f0;
+}
+
+/* Phần create account */
+.signup-text {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.signup-link {
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.signup-link:hover {
+  text-decoration: underline;
+}
+
+/* res */
+/* Tablet */
+@media (max-width: 768px) {
+  body {
+    margin-top: 50px;
+  }
+
+  .login-box {
+    padding: 30px 25px;
+  }
+
+  .logo {
+    width: 45px;
+    height: 45px;
+  }
+
+  .title {
+    font-size: 2.2rem;
+  }
+
+  .options {
+    font-size: 1.1rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  body {
+    margin-top: 30px;
+  }
+
+  .login-box {
+    padding: 30px 20px;
+  }
+
+  .logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .options {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
