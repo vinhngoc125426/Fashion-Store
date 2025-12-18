@@ -7,7 +7,7 @@ body {
   font-size: 1.6rem;
   color: #333;
   line-height: 1.6;
-  background-color: #fff;
+  background-color: #faf9f5;
 }
 
 .container {
@@ -18,7 +18,7 @@ body {
 
 /* Header */
 .header {
-  background-color: #000;
+  background-color: #141413;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
   position: sticky;
   top: 0;
@@ -34,7 +34,7 @@ body {
 
 .logo h1 {
   font-size: 2.8rem;
-  color: white;
+  color: #faf9f5;
   margin: 0;
   font-weight: 600;
 }
@@ -50,17 +50,14 @@ body {
 
 .nav-link {
   text-decoration: none;
-  color: white;
+  color: #faf9f5;
   font-weight: 500;
   transition: color 0.3s ease;
+  text-transform: capitalize;
 }
 
 .nav-link:hover {
   color: #959596;
-}
-
-header nav a {
-  text-transform: capitalize;
 }
 
 /* Hero img */
@@ -79,7 +76,7 @@ header nav a {
 /* Product section*/
 .products {
   padding: 60px 0;
-  background-color: #f5f7fa;
+  background-color: #141413;
 }
 
 .product-title {
@@ -87,7 +84,7 @@ header nav a {
   font-size: 5rem;
   margin: 0 0 50px 0;
   font-weight: 400;
-  color: #333;
+  color: #faf9f5;
 }
 
 .product-grid {
@@ -98,7 +95,7 @@ header nav a {
 }
 
 .product-card {
-  background-color: #fff;
+  background-color: #faf9f5;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -125,7 +122,7 @@ header nav a {
 }
 
 .product-card:hover .product-image img {
-  transform: scale(1.05); /* phóng to ảnh trong đấy khi hover */
+  transform: scale(1.05);
 }
 
 .product-info {
@@ -150,7 +147,7 @@ header nav a {
   display: inline-block;
   padding: 10px 24px;
   background-color: #33383c;
-  color: #fff;
+  color: #faf9f5;
   font-size: 1.3rem;
   text-decoration: none;
   border-radius: 6px;
@@ -168,7 +165,7 @@ header nav a {
   top: 7px;
   right: -30px;
   background: red;
-  color: #fff;
+  color: #faf9f5;
   font-size: 1.2rem;
   font-weight: 700;
   transform: rotate(45deg);
@@ -214,14 +211,17 @@ header nav a {
 .product-detail-content {
   display: flex;
   gap: 50px;
-  background-color: #fff;
+  background-color: #faf9f5;
   padding: 40px;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .product-detail-image {
-  flex: 0 0 500px;
+  flex-grow: 0; /* Không giãn ra */
+  flex-shrink: 0; /* Không co lại */
+  flex-basis: 500px; /* Kích thước cơ bản 500px */
+  cursor: pointer;
 }
 
 .product-detail-image img {
@@ -230,8 +230,39 @@ header nav a {
   border-radius: 8px;
 }
 
+.image-zoom {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.zoom-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 8px;
+}
+
+.close-zoom {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}
+
+.close-zoom:hover {
+  color: #bbb;
+}
+
 .product-detail-info {
-  flex: 1; /* Chiếm hết chỗ còn lại */
+  flex: 1;
 }
 
 .product-detail-title {
@@ -310,7 +341,7 @@ header nav a {
   display: inline-block;
   padding: 14px 40px;
   background-color: #33383c;
-  color: #fff;
+  color: #faf9f5;
   font-size: 1.6rem;
   text-decoration: none;
   border-radius: 6px;
@@ -327,7 +358,7 @@ header nav a {
 /* footer */
 .footer {
   background-color: #000;
-  color: #fff;
+  color: #faf9f5;
   padding: 50px 0 20px 0;
 }
 
@@ -358,7 +389,7 @@ header nav a {
 }
 
 .footer-col a:hover {
-  color: #fff;
+  color: #faf9f5;
 }
 
 .footer-bottom {
@@ -415,6 +446,11 @@ header nav a {
     flex-direction: column;
     gap: 30px;
   }
+
+  .zoom-content img {
+    height: 80vh;
+    width: auto;
+  }
 }
 
 /* Mobile */
@@ -461,5 +497,10 @@ header nav a {
 
   .price-old {
     font-size: 1.8rem;
+  }
+
+  .zoom-content img {
+    height: 40vh;
+    width: auto;
   }
 }

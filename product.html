@@ -48,7 +48,7 @@
         <div class="product-detail-content">
           <!-- Product Image -->
           <div class="product-detail-image">
-            <img src="img/Áo sơ mi trắng.webp" alt="Áo sơ mi trắng" />
+            <img src="img/Áo-sơ-mi-trắng.jpg" alt="Áo sơ mi trắng" onclick="openZoom()" />
           </div>
 
           <!-- Product Information -->
@@ -111,9 +111,17 @@
           </div>
         </div>
         <div class="footer-bottom">
-          <p>&copy; 2024 Fashion Store. All rights reserved.</p>
+          <p>&copy; <span class="current-year"></span> Fashion Store. All rights reserved.</p>
         </div>
       </div>
     </footer>
+
+    <div id="image-zoom" class="image-zoom" onclick="closeZoom()">
+      <span class="close-zoom">&times;</span>
+      <img class="zoom-content" id="zoom-image" />
+    </div>
+
+    <script src="js/openImg.js"></script>
+    <script src="js/year.js"></script>
   </body>
 </html>
