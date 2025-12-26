@@ -35,7 +35,6 @@ body {
 .logo h1 {
   font-size: 2.8rem;
   color: #faf9f5;
-  margin: 0;
   font-weight: 600;
 }
 
@@ -63,10 +62,12 @@ body {
 /* Hero img */
 .hero {
   height: 100vh;
+  width: 100%;
   overflow: hidden;
 }
 
 .hero-image {
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -82,14 +83,14 @@ body {
 .product-title {
   text-align: center;
   font-size: 5rem;
-  margin: 0 0 50px 0;
+  margin-bottom: 50px;
   font-weight: 400;
   color: #faf9f5;
 }
 
 .product-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
   gap: 30px;
   margin-bottom: 40px;
 }
@@ -185,7 +186,7 @@ body {
 
 /* Product detail */
 .product-detail {
-  padding: 40px 0 60px 0;
+  padding: 40px 0 0 0;
 }
 
 .back-link {
@@ -218,9 +219,9 @@ body {
 }
 
 .product-detail-image {
-  flex-grow: 0; /* Không giãn ra */
-  flex-shrink: 0; /* Không co lại */
-  flex-basis: 500px; /* Kích thước cơ bản 500px */
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 500px;
   cursor: pointer;
 }
 
@@ -240,7 +241,7 @@ body {
   background-color: rgba(0, 0, 0, 0.9);
 }
 
-.zoom-content {
+.zoom {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -355,7 +356,7 @@ body {
   background-color: #33383cc8;
 }
 
-/* footer */
+/*Footer */
 .footer {
   background-color: #000;
   color: #faf9f5;
@@ -429,7 +430,7 @@ body {
   }
 
   .product-grid {
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
   }
 

@@ -150,18 +150,11 @@ body {
 
 .or {
   display: flex;
-  align-items: center;
+  justify-content: center;
   margin: 30px 0;
 }
 
-.or-line {
-  flex: 1; /*Phần tử tự giãn ra chiếm hết không gian còn lại */
-  height: 1px;
-  background-color: #000;
-}
-
 .or-text {
-  padding: 0 15px;
   font-weight: bold;
   font-size: 1.3rem;
 }
@@ -187,7 +180,7 @@ body {
   background-color: #f0f0f0;
 }
 
-/* Phần create account */
+/* Create account */
 .signup-text {
   text-align: center;
   font-size: 1.2rem;
